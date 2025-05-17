@@ -1,7 +1,10 @@
 const express = require('express');
 const cors = require('cors');      // ➊ cors paketini yükle
 const app = express();
-const port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
 
 // ➜ Tüm origin’lere izin ver (geliştirme için)
 //    production’da bunu sadece kendi frontend origin’inle sınırlandırmalısın.
